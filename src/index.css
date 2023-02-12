@@ -1,4 +1,6 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,4 +14,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
 }

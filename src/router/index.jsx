@@ -5,7 +5,7 @@ import { routes } from './routes';
 
 const { dashboard, login, signup } = routes;
 export function PublicRoutes() {
-
+	console.log('PublicRoutes');
 	return (
 		<Switch>
 			<Route path={signup} component={SignUp} />
@@ -18,8 +18,7 @@ export function PublicRoutes() {
 export function PrivateRoutes() {
 	return (
 		<Switch>
-			<Route path={dashboard} component={Dashboard}>
-			</Route>
+			<Route path={dashboard} component={Dashboard}></Route>
 		</Switch>
 	);
 }

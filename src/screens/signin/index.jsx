@@ -14,6 +14,7 @@ import { WithContainer } from '../../HOC';
 import { HiUser, HiLockClosed } from 'react-icons/hi';
 import axios from 'axios';
 import { routes } from '../../router/routes';
+import config from '../../../config';
 
 const token = localStorage.getItem('auth_token');
 const { dashboard } = routes;
@@ -38,7 +39,7 @@ function Login() {
 	const onVerify = () => {
 		axios({
 			method: 'post',
-			url: 'http://localhost:5000/api/v1/auth/login',
+			url: `${config.api_url}auth/login`,
 			data: formData,
 		})
 			.then((response) => {
